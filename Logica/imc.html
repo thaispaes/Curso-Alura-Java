@@ -23,4 +23,12 @@
 
     document.write("O IMC calculado de "+ nome +" é " + imc);
 
+    if(imc < 18.5) {
+        textWrite("Voce está abaixo do recomendado");
+    } else if (imc > 35) {
+        textWrite("Voce está acima do recomendado");
+    } else if (imc >= 18.5 && imc <= 35) {
+        textWrite("Voce está excelente!");
+    }
+
 </script>
