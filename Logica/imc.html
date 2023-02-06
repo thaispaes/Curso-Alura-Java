@@ -13,11 +13,16 @@
 
     function calculoIMC(peso, altura) {
         var imc = peso / (altura*altura);
-        textWrite("O imc calculado é " + Math.round(imc));
+        return imc;
     }
 
    
-    imc = calculoIMC(72, 1.71);
-    imc = calculoIMC(68, 1.73);
+    imcFlavio = calculoIMC(72, 1.71);
+    imcAmigo = calculoIMC(68, 1.73);
+    totalImc = imcAmigo+imcFlavio;
 
+    textWrite(imcFlavio);
+    textWrite(imcAmigo);
+
+    textWrite("A soma dos IMC's é "+ totalImc);
 </script>
