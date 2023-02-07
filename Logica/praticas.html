@@ -1,6 +1,17 @@
 <meta charset="utf-8">
 
 <script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+
      //Idades melhoradas
     var idadeFlavio = 39;
     var idadeJoaquim = 20;
@@ -21,15 +32,6 @@
     document.write("Eu nasci em " + (2016 - minhaIdade));
 
     //Total de convidados
-    function pulaLinha() {
-        document.write("<br>");
-    }
-
-    function mostra(frase) {
-        document.write(frase);
-        pulaLinha();
-    }
-
     var convidados = parseInt (prompt("Número de convidados"));
     var vips = parseInt (prompt("Número de convidados VIP's"));
 
@@ -37,6 +39,70 @@
 
     mostra("O total de convidados é " + total);
 
-</script>
+    //Aluno Exagerado
+    var numeroPensado = sorteia();
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?"));
+
+    if(chute == numeroPensado) {
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+    } else {
+
+        var contador = 1;
+        while( contador <= 10 ) {
+            mostra("Já era, você errou!");
+            contador = contador + 1;
+        }
+
+    }
+
+    //Contando de 2 em 2
+    var contador = 2;
+    while(contador <= 100) {
+        mostra(contador);
+        contador = contador + 2; // incrementa de dois em dois
+    }
+    mostra("FIM");
+
+    //Imprimir todos os números entre 30 e 40 (inclusive 30 e 40), porém os números 33 e 37 não devem ser impressos!
+    var contador = 30;
+    while(contador <= 40) {
+
+        if( contador == 33 ) {
+        contador = contador + 1;
+        }
+        else if(contador == 37) {    
+            contador = contador + 1;
+        }
+        else {
+        mostra(contador);
+        contador = contador + 1; 
+        }
+      }
+    mostra("FIM");
+
+    //Decremento
+    var contador = 20;
+
+    while( contador >= 0) {
+
+      mostra(contador);
+      contador = contador - 1;
+    }
+
+    mostra("FIM");
+
+    //Anos da copa
+    var anoCopa = 1930;
+    var limite = parseInt(prompt("Qual é o ano limite?"));
+
+    while(anoCopa <= limite) {
+
+        mostra(anoCopa + " tem copa!");
+        anoCopa = anoCopa + 4;
+    }
+
+    mostra("Ufa! Esses foram os anos de copa até " + limite);
+
+    
 
 </script>
