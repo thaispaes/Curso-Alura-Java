@@ -4,13 +4,21 @@
 <button>Compare com o meu segredo</button>
 
 <script>
-    var segredo =5;
+   var segredos = [5,7,10,2];
     var input = document.querySelector("input");
 
     function verificarSegredo() {
-        if (input.value == segredo) {
-        alert("Você acertou!");
-        } else {
+
+        var acertoSegredo = false;
+
+        for (var cont = 0; cont < segredos.length; cont++) {
+            if (input.value == segredos[[cont]]) {
+                alert("Você acertou!");
+                acertoSegredo = true;
+            } 
+        }
+
+        if(acertoSegredo == false){
             alert("Você errou!!!!!");
         }
         
