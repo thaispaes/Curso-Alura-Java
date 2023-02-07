@@ -12,12 +12,20 @@
     }
 
     var numeroPensado = Math.round(Math.random() * 10);
-    var chute = parseInt("Digite seu chute!");
+    var tentativas = 1;
 
-    if (chute == numeroPensado) {
-        textWrite("Você acertou!");
-    } else {
-        textWrite("Você errou o chute, o número pensado foi "+ numeroPensado);
+    while(tentativas == 3){
+        var chute = parseInt("Digite seu chute!");
+
+            if (chute == numeroPensado) {
+                textWrite("Você acertou!");
+                break;
+            } else {
+                textWrite("Você errou o chute! Tente novamente");
+                tentativas++
+            }
     }
+
+    textWrite("Você perdeu suas chances, o número pensado foi "+ numeroPensado);
 
 </script>
