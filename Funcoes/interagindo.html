@@ -21,10 +21,12 @@
     }
 
     function mudaCor() {
-            indiceCorAtual++;
-            if (indiceCorAtual >= cores.length) {
-                indiceCorAtual = 0; // volta para a primeira cor, azul
-            }
+        indiceCorAtual++;
+        
+        if (indiceCorAtual >= cores.length) {
+            indiceCorAtual = 0; // volta para a primeira cor, azul
+        }
+
         return false; // para não exibir o menu padrão do canvas
     }
 
