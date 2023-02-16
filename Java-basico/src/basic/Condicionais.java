@@ -8,8 +8,6 @@ public class Condicionais {
         int quantidadePessoas = 3;
         boolean acompanhado = quantidadePessoas >= 2;
 
-        System.out.println("valor de acompanhado = " + acompanhado);
-
         if (idade >= 18 && acompanhado) {
             System.out.println("seja bem vindo");
         } else {
